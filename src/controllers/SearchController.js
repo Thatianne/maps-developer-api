@@ -14,14 +14,12 @@ const methods = {
         $near: {
           $geometry: {
             type: 'Point',
-            coordinates: [-38.953645, -12.2461238]
+            coordinates: [Number(longitude), Number(latitude)]
           },
           $maxDistance: 10000
         },
       }
     })
-
-    console.log(techsArr)
 
     return res.json(devs)
   }

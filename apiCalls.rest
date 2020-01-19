@@ -1,4 +1,4 @@
-@host = api.maps-developer.local
+@host = api.developer-maps.local
 @protocol = http
 @port = 3333
 
