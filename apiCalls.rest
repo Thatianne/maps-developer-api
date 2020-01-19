@@ -1,0 +1,29 @@
+@host = api.maps-developer.local
+@protocol = http
+@port = 3333
+
+@baseUrl = {{protocol}}://{{host}}:{{port}}
+@contentType = application/json 
+
+@latitude = -12.2461238
+@longitude = -38.9536459
+
+POST {{baseUrl}}/devs
+Content-Type: {{contentType}}
+
+{
+  "github_username": "Thatianne",
+  "techs": "PHP, Javascript, Vue",
+  "latitude": {{latitude}},
+  "longitude": {{longitude}}
+}
+
+###
+
+GET {{baseUrl}}/devs
+Content-Type: {{contentType}}
+
+###
+
+GET {{baseUrl}}/search?latitude={{latitude}}&longitude={{longitude}}&techs=Javascript
+Content-Type: {{contentType}}
