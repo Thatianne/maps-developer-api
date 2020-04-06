@@ -1,12 +1,14 @@
-@host = api.developer-maps.local
+@host = localhost
 @protocol = http
 @port = 3333
 
 @baseUrl = {{protocol}}://{{host}}:{{port}}
-@contentType = application/json 
+@contentType = application/json
 
 @latitude = -12.2461238
 @longitude = -38.9536459
+
+@id = 5e85394dabd69c3ba6c7c6d5
 
 POST {{baseUrl}}/devs
 Content-Type: {{contentType}}
@@ -21,6 +23,14 @@ Content-Type: {{contentType}}
 ###
 
 GET {{baseUrl}}/devs
+Content-Type: {{contentType}}
+
+###
+GET {{baseUrl}}/devs/{{id}}
+Content-Type: {{contentType}}
+
+###
+DELETE {{baseUrl}}/devs/{{id}}
 Content-Type: {{contentType}}
 
 ###

@@ -2,10 +2,10 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180)
 }
 
-module.exports = function calculateDistance(center, point) {
+module.exports = function calculateDistance(c, point) {
   const radius = 6371
 
-  const { latitude: lat1, longitude: long1 } = center
+  const { latitude: lat1, longitude: long1 } = c
   const { latitude: lat2, longitude: long2 } = point
 
   const dLat = deg2rad(lat2 - lat1)
